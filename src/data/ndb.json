@@ -1,0 +1,401 @@
+{
+  "airac": {
+    "active": { "cycle": "2607", "from": "JUN10", "to": "JUL08", "year": "26" },
+    "next": { "cycle": "2608", "from": "JUL08", "to": "AUG05", "year": "26" }
+  },
+  "opProgram": "549845-10.4A",
+  "coData": "WFM2607001",
+  "model": "737-800",
+  "engRating": "26K",
+  "airports": [
+    {
+      "ident": "SBGR",
+      "name": "GUARULHOS",
+      "lat": -23.4356,
+      "lon": -46.4731,
+      "elev": 2459,
+      "runways": [
+        { "id": "09L", "hdg": 95, "lengthFt": 12140, "ils": { "freq": 111.3, "crs": 95 } },
+        { "id": "27R", "hdg": 275, "lengthFt": 12140 },
+        { "id": "09R", "hdg": 95, "lengthFt": 9843, "ils": { "freq": 109.3, "crs": 95 } },
+        { "id": "27L", "hdg": 275, "lengthFt": 9843, "ils": { "freq": 110.7, "crs": 275 } }
+      ],
+      "gates": [
+        { "id": "A12", "lat": -23.433, "lon": -46.47 },
+        { "id": "B05", "lat": -23.434, "lon": -46.475 },
+        { "id": "C21", "lat": -23.436, "lon": -46.478 },
+        { "id": "D14", "lat": -23.438, "lon": -46.469 }
+      ]
+    },
+    {
+      "ident": "SBSP",
+      "name": "CONGONHAS",
+      "lat": -23.6261,
+      "lon": -46.6564,
+      "elev": 2631,
+      "runways": [
+        { "id": "17R", "hdg": 175, "lengthFt": 6365, "ils": { "freq": 109.9, "crs": 175 } },
+        { "id": "35L", "hdg": 355, "lengthFt": 6365 },
+        { "id": "17L", "hdg": 175, "lengthFt": 4711 },
+        { "id": "35R", "hdg": 355, "lengthFt": 4711 }
+      ],
+      "gates": [
+        { "id": "G03", "lat": -23.625, "lon": -46.655 },
+        { "id": "G11", "lat": -23.627, "lon": -46.658 }
+      ]
+    },
+    {
+      "ident": "SBGL",
+      "name": "GALEAO",
+      "lat": -22.81,
+      "lon": -43.2506,
+      "elev": 28,
+      "runways": [
+        { "id": "10", "hdg": 100, "lengthFt": 13123, "ils": { "freq": 110.3, "crs": 100 } },
+        { "id": "28", "hdg": 280, "lengthFt": 13123 },
+        { "id": "15", "hdg": 150, "lengthFt": 9840 },
+        { "id": "33", "hdg": 330, "lengthFt": 9840 }
+      ],
+      "gates": [
+        { "id": "B22", "lat": -22.809, "lon": -43.249 },
+        { "id": "C35", "lat": -22.812, "lon": -43.253 }
+      ]
+    },
+    {
+      "ident": "SBKP",
+      "name": "VIRACOPOS",
+      "lat": -23.0069,
+      "lon": -47.1344,
+      "elev": 2170,
+      "runways": [
+        { "id": "15", "hdg": 148, "lengthFt": 10630, "ils": { "freq": 109.5, "crs": 148 } },
+        { "id": "33", "hdg": 328, "lengthFt": 10630 }
+      ],
+      "gates": [{ "id": "P04", "lat": -23.006, "lon": -47.133 }]
+    },
+    {
+      "ident": "SBCF",
+      "name": "CONFINS",
+      "lat": -19.6244,
+      "lon": -43.9719,
+      "elev": 2715,
+      "runways": [
+        { "id": "16", "hdg": 163, "lengthFt": 9842, "ils": { "freq": 110.9, "crs": 163 } },
+        { "id": "34", "hdg": 343, "lengthFt": 9842 }
+      ],
+      "gates": [{ "id": "A07", "lat": -19.624, "lon": -43.971 }]
+    },
+    {
+      "ident": "SBPA",
+      "name": "PORTO ALEGRE",
+      "lat": -29.9939,
+      "lon": -51.1711,
+      "elev": 11,
+      "runways": [
+        { "id": "11", "hdg": 107, "lengthFt": 10007, "ils": { "freq": 111.3, "crs": 107 } },
+        { "id": "29", "hdg": 287, "lengthFt": 10007 }
+      ],
+      "gates": [{ "id": "G09", "lat": -29.993, "lon": -51.17 }]
+    },
+    {
+      "ident": "SBSV",
+      "name": "SALVADOR",
+      "lat": -12.9086,
+      "lon": -38.3225,
+      "elev": 64,
+      "runways": [
+        { "id": "10", "hdg": 100, "lengthFt": 9862, "ils": { "freq": 110.1, "crs": 100 } },
+        { "id": "28", "hdg": 280, "lengthFt": 9862 },
+        { "id": "17", "hdg": 170, "lengthFt": 4921 },
+        { "id": "35", "hdg": 350, "lengthFt": 4921 }
+      ],
+      "gates": [
+        { "id": "A02", "lat": -12.908, "lon": -38.321 },
+        { "id": "B06", "lat": -12.91, "lon": -38.324 }
+      ]
+    },
+    {
+      "ident": "SBRF",
+      "name": "RECIFE",
+      "lat": -8.1264,
+      "lon": -34.9236,
+      "elev": 33,
+      "runways": [
+        { "id": "18", "hdg": 177, "lengthFt": 9865, "ils": { "freq": 110.5, "crs": 177 } },
+        { "id": "36", "hdg": 357, "lengthFt": 9865 }
+      ],
+      "gates": [{ "id": "B03", "lat": -8.126, "lon": -34.923 }]
+    },
+    {
+      "ident": "SBBR",
+      "name": "BRASILIA",
+      "lat": -15.8692,
+      "lon": -47.9208,
+      "elev": 3497,
+      "runways": [
+        { "id": "11L", "hdg": 107, "lengthFt": 10498, "ils": { "freq": 109.1, "crs": 107 } },
+        { "id": "29R", "hdg": 287, "lengthFt": 10498 },
+        { "id": "11R", "hdg": 107, "lengthFt": 10827 },
+        { "id": "29L", "hdg": 287, "lengthFt": 10827 }
+      ],
+      "gates": [{ "id": "S14", "lat": -15.869, "lon": -47.92 }]
+    },
+    {
+      "ident": "SBCT",
+      "name": "CURITIBA",
+      "lat": -25.5283,
+      "lon": -49.1758,
+      "elev": 2988,
+      "runways": [
+        { "id": "15", "hdg": 147, "lengthFt": 7267, "ils": { "freq": 109.7, "crs": 147 } },
+        { "id": "33", "hdg": 327, "lengthFt": 7267 }
+      ],
+      "gates": [{ "id": "G05", "lat": -25.528, "lon": -49.175 }]
+    },
+    {
+      "ident": "SBFL",
+      "name": "FLORIANOPOLIS",
+      "lat": -27.6703,
+      "lon": -48.5525,
+      "elev": 16,
+      "runways": [
+        { "id": "14", "hdg": 139, "lengthFt": 7874, "ils": { "freq": 110.1, "crs": 139 } },
+        { "id": "32", "hdg": 319, "lengthFt": 7874 }
+      ],
+      "gates": [{ "id": "G02", "lat": -27.67, "lon": -48.552 }]
+    },
+    {
+      "ident": "SBRJ",
+      "name": "SANTOS DUMONT",
+      "lat": -22.9105,
+      "lon": -43.1631,
+      "elev": 11,
+      "runways": [
+        { "id": "02L", "hdg": 23, "lengthFt": 4341 },
+        { "id": "20R", "hdg": 203, "lengthFt": 4341 },
+        { "id": "02R", "hdg": 23, "lengthFt": 4200 },
+        { "id": "20L", "hdg": 203, "lengthFt": 4200 }
+      ],
+      "gates": [{ "id": "G01", "lat": -22.91, "lon": -43.163 }]
+    }
+  ],
+  "waypoints": [
+    { "ident": "VURIB", "lat": -22.8, "lon": -45.98 },
+    { "ident": "ESEPA", "lat": -21.96, "lon": -45.33 },
+    { "ident": "MABSI", "lat": -20.91, "lon": -44.52 },
+    { "ident": "POKON", "lat": -19.75, "lon": -43.62 },
+    { "ident": "NUVRA", "lat": -18.49, "lon": -42.64 },
+    { "ident": "TENPA", "lat": -17.33, "lon": -41.75 },
+    { "ident": "OPLEN", "lat": -16.07, "lon": -40.77 },
+    { "ident": "GARIS", "lat": -14.91, "lon": -39.87 },
+    { "ident": "KUMBA", "lat": -23.1, "lon": -45.7 },
+    { "ident": "GRI01", "lat": -23.32, "lon": -46.3 },
+    { "ident": "GRI02", "lat": -23.55, "lon": -46.66 },
+    { "ident": "GRI03", "lat": -23.5, "lon": -46.2 },
+    { "ident": "SANPA", "lat": -23.95, "lon": -46.85 },
+    { "ident": "MOKAB", "lat": -23.7, "lon": -46.55 },
+    { "ident": "FF09G", "lat": -23.45, "lon": -46.62 },
+    { "ident": "FF27G", "lat": -23.42, "lon": -46.32 },
+    { "ident": "PIPSA", "lat": -13.3, "lon": -38.6 },
+    { "ident": "SV001", "lat": -12.8, "lon": -38.1 },
+    { "ident": "FF10S", "lat": -12.93, "lon": -38.46 },
+    { "ident": "FF28S", "lat": -12.88, "lon": -38.19 },
+    { "ident": "CG001", "lat": -23.75, "lon": -46.7 },
+    { "ident": "CG002", "lat": -23.5, "lon": -46.55 },
+    { "ident": "FF17P", "lat": -23.5, "lon": -46.64 },
+    { "ident": "GG001", "lat": -22.7, "lon": -43.0 },
+    { "ident": "GG002", "lat": -22.9, "lon": -43.4 },
+    { "ident": "FF10G", "lat": -22.83, "lon": -43.38 },
+    { "ident": "ANAXI", "lat": -21.5, "lon": -47.5 },
+    { "ident": "GOIAN", "lat": -18.6, "lon": -47.8 },
+    { "ident": "BUSKO", "lat": -24.8, "lon": -47.9 },
+    { "ident": "DOLVI", "lat": -26.0, "lon": -48.9 },
+    { "ident": "ALDEA", "lat": -22.0, "lon": -47.0 },
+    { "ident": "BIVAK", "lat": -19.0, "lon": -45.5 },
+    { "ident": "CUMBI", "lat": -17.5, "lon": -44.0 },
+    { "ident": "DUVKO", "lat": -15.5, "lon": -42.0 },
+    { "ident": "ENBOM", "lat": -13.8, "lon": -39.5 },
+    { "ident": "PIRAT", "lat": -30.4, "lon": -51.3 },
+    { "ident": "PIRAT", "lat": -8.5, "lon": -35.2 },
+    { "ident": "TOSKA", "lat": -21.3, "lon": -43.5 },
+    { "ident": "UMBRA", "lat": -25.2, "lon": -49.0 },
+    { "ident": "VOLTA", "lat": -22.5, "lon": -44.1 },
+    { "ident": "WAKDA", "lat": -14.2, "lon": -41.3 },
+    { "ident": "XOTIS", "lat": -16.8, "lon": -43.9 },
+    { "ident": "YEBRA", "lat": -11.5, "lon": -37.5 },
+    { "ident": "ZUMBI", "lat": -12.5, "lon": -38.0 },
+    { "ident": "DETNO", "lat": -22.3, "lon": -45.0 },
+    { "ident": "ILBUS", "lat": -20.2, "lon": -46.8 },
+    { "ident": "KOVNA", "lat": -16.5, "lon": -45.2 },
+    { "ident": "LUMBO", "lat": -10.5, "lon": -36.8 },
+    { "ident": "MEDUS", "lat": -24.3, "lon": -47.2 },
+    { "ident": "NIVQA", "lat": -27.0, "lon": -50.2 },
+    { "ident": "OBKUL", "lat": -28.7, "lon": -50.9 },
+    { "ident": "RAZOR", "lat": -9.4, "lon": -35.9 },
+    { "ident": "SELBA", "lat": -23.2, "lon": -44.7 },
+    { "ident": "TUVKO", "lat": -26.6, "lon": -49.6 },
+    { "ident": "UPLON", "lat": -19.4, "lon": -40.1 }
+  ],
+  "navaids": [
+    { "ident": "GRU", "name": "GUARULHOS", "freq": 116.1, "lat": -23.44, "lon": -46.47, "cls": "VDHW" },
+    { "ident": "CGO", "name": "CONGONHAS", "freq": 116.9, "lat": -23.63, "lon": -46.66, "cls": "VDHW" },
+    { "ident": "KPN", "name": "VIRACOPOS", "freq": 115.1, "lat": -23.01, "lon": -47.13, "cls": "VDTW" },
+    { "ident": "GIG", "name": "GALEAO", "freq": 115.0, "lat": -22.81, "lon": -43.25, "cls": "VDHW" },
+    { "ident": "SDU", "name": "SANTOS DUMONT", "freq": 112.3, "lat": -22.91, "lon": -43.16, "cls": "VDTW" },
+    { "ident": "CNF", "name": "CONFINS", "freq": 115.3, "lat": -19.62, "lon": -43.97, "cls": "VDHW" },
+    { "ident": "PAL", "name": "PORTO ALEGRE", "freq": 116.4, "lat": -29.99, "lon": -51.17, "cls": "VDHW" },
+    { "ident": "SVD", "name": "SALVADOR", "freq": 113.9, "lat": -12.91, "lon": -38.33, "cls": "VDHW" },
+    { "ident": "RFE", "name": "RECIFE", "freq": 114.1, "lat": -8.13, "lon": -34.92, "cls": "VDHW" },
+    { "ident": "BRS", "name": "BRASILIA", "freq": 115.9, "lat": -15.87, "lon": -47.92, "cls": "VDHW" },
+    { "ident": "CTB", "name": "CURITIBA", "freq": 116.6, "lat": -25.53, "lon": -49.18, "cls": "VDHW" },
+    { "ident": "FLO", "name": "FLORIANOPOLIS", "freq": 112.7, "lat": -27.67, "lon": -48.55, "cls": "VDTW" },
+    { "ident": "LAG", "name": "LAGOA", "freq": 113.4, "lat": -18.05, "lon": -42.35, "cls": "VDHW" },
+    { "ident": "VOT", "name": "VOTORANTIM", "freq": 112.1, "lat": -20.45, "lon": -44.3, "cls": "VDHW" },
+    { "ident": "TEO", "name": "TEOFILO", "freq": 114.7, "lat": -17.3, "lon": -41.7, "cls": "VDHW" },
+    { "ident": "ITA", "name": "ITABUNA", "freq": 113.1, "lat": -14.85, "lon": -39.9, "cls": "VDHW" },
+    { "ident": "PB", "name": "PITUBA", "freq": 380, "lat": -12.95, "lon": -38.4, "cls": "NB" },
+    { "ident": "GR", "name": "GUARULHOS NDB", "freq": 285, "lat": -23.4, "lon": -46.5, "cls": "NB" }
+  ],
+  "airways": [
+    { "name": "UZ44", "fixes": ["VURIB", "ESEPA", "MABSI", "POKON"] },
+    { "name": "UZ31", "fixes": ["POKON", "NUVRA", "TENPA", "OPLEN", "GARIS"] },
+    { "name": "UZ6", "fixes": ["ANAXI", "GOIAN", "BRS"] },
+    { "name": "W2", "fixes": ["BUSKO", "DOLVI", "CTB"] },
+    { "name": "W9", "fixes": ["GARIS", "ENBOM", "ZUMBI"] }
+  ],
+  "procedures": {
+    "SBGR": {
+      "sids": [
+        {
+          "name": "VURI1A",
+          "runways": ["09L", "09R"],
+          "legs": [{ "ident": "GRI01", "alt": "A7000" }, { "ident": "KUMBA" }, { "ident": "VURIB" }]
+        },
+        {
+          "name": "VURI1B",
+          "runways": ["27L", "27R"],
+          "legs": [{ "ident": "GRI02", "alt": "A6000" }, { "ident": "KUMBA" }, { "ident": "VURIB" }]
+        },
+        {
+          "name": "ANAX2A",
+          "runways": ["09L", "09R"],
+          "legs": [{ "ident": "GRI01", "alt": "A7000" }, { "ident": "ANAXI" }]
+        },
+        {
+          "name": "ANAX2B",
+          "runways": ["27L", "27R"],
+          "legs": [{ "ident": "GRI02", "alt": "A6000" }, { "ident": "ANAXI" }]
+        }
+      ],
+      "stars": [
+        {
+          "name": "SANP1",
+          "runways": ["09L", "09R", "27L", "27R"],
+          "legs": [{ "ident": "SANPA", "spd": 250, "alt": "B12000" }, { "ident": "MOKAB", "alt": "A6000" }]
+        },
+        {
+          "name": "KUMB2",
+          "runways": ["09L", "09R", "27L", "27R"],
+          "legs": [{ "ident": "KUMBA", "spd": 250, "alt": "B14000" }, { "ident": "GRI03" }]
+        }
+      ],
+      "approaches": [
+        { "name": "ILS 09R", "runway": "09R", "legs": [{ "ident": "FF09G", "alt": "AT5000", "spd": 180 }] },
+        { "name": "ILS 27L", "runway": "27L", "legs": [{ "ident": "FF27G", "alt": "AT5000", "spd": 180 }] }
+      ]
+    },
+    "SBSV": {
+      "sids": [
+        {
+          "name": "SVD1A",
+          "runways": ["10", "28"],
+          "legs": [{ "ident": "SV001", "alt": "A3000" }, { "ident": "GARIS" }]
+        }
+      ],
+      "stars": [
+        {
+          "name": "GARI1",
+          "runways": ["10", "28"],
+          "legs": [{ "ident": "GARIS", "spd": 280 }, { "ident": "PIPSA", "spd": 250, "alt": "B10000" }, { "ident": "SVD" }]
+        },
+        {
+          "name": "OPLE1",
+          "runways": ["10", "28"],
+          "legs": [
+            { "ident": "OPLEN" },
+            { "ident": "GARIS", "spd": 280 },
+            { "ident": "PIPSA", "spd": 250, "alt": "B10000" },
+            { "ident": "SVD" }
+          ]
+        }
+      ],
+      "approaches": [
+        { "name": "ILS 10", "runway": "10", "legs": [{ "ident": "FF10S", "alt": "AT2200", "spd": 170 }] },
+        { "name": "RNAV 28", "runway": "28", "legs": [{ "ident": "FF28S", "alt": "AT2500", "spd": 170 }] }
+      ]
+    },
+    "SBSP": {
+      "sids": [
+        {
+          "name": "CGO1A",
+          "runways": ["17R", "17L"],
+          "legs": [{ "ident": "CG001", "alt": "A5000" }, { "ident": "CGO" }]
+        }
+      ],
+      "stars": [
+        {
+          "name": "GRI4",
+          "runways": ["17R", "17L", "35L", "35R"],
+          "legs": [{ "ident": "GRI03", "spd": 250 }, { "ident": "CG002", "alt": "B8000" }]
+        }
+      ],
+      "approaches": [
+        { "name": "ILS 17R", "runway": "17R", "legs": [{ "ident": "FF17P", "alt": "AT5500", "spd": 180 }] }
+      ]
+    },
+    "SBGL": {
+      "sids": [
+        {
+          "name": "GIG1",
+          "runways": ["10", "28", "15", "33"],
+          "legs": [{ "ident": "GG001", "alt": "A4000" }, { "ident": "VURIB" }]
+        }
+      ],
+      "stars": [
+        {
+          "name": "MOKA1",
+          "runways": ["10", "28"],
+          "legs": [{ "ident": "GG002", "spd": 250, "alt": "B11000" }]
+        }
+      ],
+      "approaches": [
+        { "name": "ILS 10", "runway": "10", "legs": [{ "ident": "FF10G", "alt": "AT3000", "spd": 180 }] }
+      ]
+    }
+  },
+  "companyRoutes": [
+    {
+      "name": "GRUSSA01",
+      "origin": "SBGR",
+      "dest": "SBSV",
+      "fltNo": "WFM101",
+      "route": [
+        { "via": "DIRECT", "to": "VURIB" },
+        { "via": "UZ44", "to": "POKON" },
+        { "via": "UZ31", "to": "GARIS" },
+        { "via": "DIRECT", "to": "SVD" }
+      ]
+    },
+    {
+      "name": "GRUPOA01",
+      "origin": "SBGR",
+      "dest": "SBPA",
+      "fltNo": "WFM220",
+      "route": [
+        { "via": "DIRECT", "to": "BUSKO" },
+        { "via": "W2", "to": "CTB" },
+        { "via": "DIRECT", "to": "PAL" }
+      ]
+    }
+  ]
+}

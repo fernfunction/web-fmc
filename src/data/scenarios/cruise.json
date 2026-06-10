@@ -1,0 +1,57 @@
+{
+  "id": "cruise",
+  "label": "IN FLIGHT · CRUISE FL360 (SBGR-SBSV)",
+  "initialPage": "LEGS",
+  "identConfirmed": true,
+  "posInitDone": true,
+  "activeLegIdent": "POKON",
+  "aircraft": {
+    "phase": "CRUISE",
+    "position": { "lat": -20.5, "lon": -44.2 },
+    "altitude": 36000,
+    "ias": 252,
+    "mach": 0.78,
+    "tas": 454,
+    "groundSpeed": 462,
+    "heading": 33,
+    "track": 36,
+    "vsFpm": 0,
+    "grossWeight": 138.2,
+    "fuel": { "total": 24.0, "perTank": [9.5, 5.0, 9.5], "fuelFlow": 5400 },
+    "sat": -54,
+    "tat": -28,
+    "wind": { "dir": 250, "speed": 40 },
+    "irs": { "status": "NAV", "driftNmHr": 1.2 },
+    "irsPosSet": true,
+    "gpsAvailable": true,
+    "onGround": false,
+    "clock": { "gmtSeconds": 49320, "date": "10JUN26" }
+  },
+  "plan": {
+    "origin": "SBGR",
+    "dest": "SBSV",
+    "coRoute": "GRUSSA01",
+    "fltNo": "WFM101",
+    "runway": "09R",
+    "sid": "VURI1A",
+    "star": "GARI1",
+    "approach": "ILS 10",
+    "route": [
+      { "via": "DIRECT", "to": "VURIB" },
+      { "via": "UZ44", "to": "POKON" },
+      { "via": "UZ31", "to": "GARIS" }
+    ],
+    "perf": {
+      "zfw": 114.2,
+      "reserves": 5.2,
+      "costIndex": 35,
+      "crzAlt": 36000,
+      "transAlt": 9000,
+      "crzWind": { "dir": 250, "speed": 40 },
+      "isaDev": 2
+    },
+    "takeoff": { "flaps": 5, "cg": 22.0, "acceptSpeeds": true },
+    "activated": true,
+    "executed": true
+  }
+}

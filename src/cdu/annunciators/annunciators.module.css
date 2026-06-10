@@ -1,0 +1,26 @@
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--u) * 0.8);
+  justify-content: center;
+}
+
+.ann {
+  font-family: var(--cdu-font);
+  font-size: calc(var(--u) * 0.62);
+  letter-spacing: 0.08em;
+  color: #4a4235;
+  border: 1px solid #1c1e20;
+  border-radius: calc(var(--u) * 0.15);
+  padding: calc(var(--u) * 0.3) calc(var(--u) * 0.2);
+  text-align: center;
+  background: #17181a;
+  writing-mode: horizontal-tb;
+  transition: color 0.2s, box-shadow 0.2s;
+}
+
+.lit {
+  color: #ffc23d;
+  box-shadow: 0 0 calc(var(--u) * 0.6) rgba(255, 194, 61, 0.5);
+  background: #241d0a;
+}

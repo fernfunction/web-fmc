@@ -1,0 +1,172 @@
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(ellipse at 50% 30%, #1d2026 0%, #0e1013 70%);
+  color: #d8dadc;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.4rem 1rem;
+  background: #15171a;
+  border-bottom: 1px solid #26282c;
+  font-family: var(--cdu-font);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+}
+
+.brand {
+  color: #8a8d91;
+}
+
+.scenario {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #9a9da1;
+}
+
+.scenario select {
+  background: #202327;
+  color: #e2e4e6;
+  border: 1px solid #34373c;
+  border-radius: 3px;
+  font-family: var(--cdu-font);
+  font-size: 0.72rem;
+  padding: 0.2rem 0.4rem;
+}
+
+.timeScale {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #9a9da1;
+}
+
+.timeScale button {
+  background: #202327;
+  color: #c8cacc;
+  border: 1px solid #34373c;
+  border-radius: 3px;
+  font-family: var(--cdu-font);
+  font-size: 0.68rem;
+  padding: 0.15rem 0.45rem;
+  cursor: pointer;
+}
+
+.tsActive {
+  background: #2f4d2f !important;
+  color: #cdeacd !important;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  --cdu-h: min(94vh, calc(100vh - 3rem));
+  overflow: hidden;
+}
+
+.helpFab {
+  position: absolute;
+  right: 1.2rem;
+  top: 1rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  background: #24272b;
+  color: #d6d8da;
+  border: 1px solid #393c41;
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.helpFab:hover {
+  background: #2e3136;
+}
+
+.helpPanel {
+  position: absolute;
+  right: 1rem;
+  top: 3.6rem;
+  bottom: 1rem;
+  width: min(26rem, 85vw);
+  overflow-y: auto;
+  background: rgba(18, 20, 23, 0.96);
+  border: 1px solid #34373c;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  z-index: 20;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.helpPanel h2 {
+  margin: 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: #e8eaec;
+}
+
+.helpPanel h3 {
+  margin: 1rem 0 0.3rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.1em;
+  color: #aeb1b5;
+}
+
+.helpHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.helpHeader button {
+  background: none;
+  border: none;
+  color: #9a9da1;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.helpTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.helpTable td {
+  padding: 0.18rem 0.4rem;
+  border-bottom: 1px solid #25282c;
+  vertical-align: top;
+}
+
+.helpTable td:first-child {
+  white-space: nowrap;
+  color: #ffd84d;
+  font-family: var(--cdu-font);
+  font-size: 0.7rem;
+}
+
+.helpList {
+  margin: 0.2rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.helpList li {
+  margin-bottom: 0.45rem;
+}
+
+.helpList code {
+  background: #22252a;
+  padding: 0 0.25rem;
+  border-radius: 3px;
+  font-size: 0.72rem;
+}

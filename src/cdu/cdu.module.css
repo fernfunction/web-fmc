@@ -1,0 +1,101 @@
+.chassis {
+  --u: calc(var(--cdu-h) / 63);
+  height: var(--cdu-h);
+  aspect-ratio: 0.62;
+  background: linear-gradient(180deg, #5b5e63 0%, #3c3f44 4%, #2e3034 50%, #232528 100%);
+  border-radius: calc(var(--u) * 1.4);
+  border: 1px solid #101214;
+  box-shadow: 0 calc(var(--u) * 1.2) calc(var(--u) * 3) rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.screenBlock {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: stretch;
+  gap: calc(var(--u) * 0.3);
+  padding: calc(var(--u) * 1) calc(var(--u) * 0.5) 0;
+}
+
+.screenWithLsk {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: calc(var(--u) * 0.4);
+  height: calc(var(--u) * 24);
+}
+
+.screenWrap {
+  border: calc(var(--u) * 0.35) solid #1a1c1e;
+  border-radius: calc(var(--u) * 0.9);
+  overflow: hidden;
+}
+
+.lskColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: calc(var(--u) * 2.2) 0;
+}
+
+.lsk {
+  width: calc(var(--u) * 2.4);
+  height: calc(var(--u) * 1.5);
+  background: linear-gradient(180deg, #3a3d42, #232528);
+  color: #c8cacc;
+  border: 1px solid #131517;
+  border-radius: calc(var(--u) * 0.25);
+  font-size: calc(var(--u) * 0.8);
+  cursor: pointer;
+  box-shadow: 0 calc(var(--u) * 0.14) 0 #0e1012;
+}
+
+.lsk:active {
+  transform: translateY(calc(var(--u) * 0.1));
+  box-shadow: none;
+}
+
+.brtRow {
+  display: flex;
+  justify-content: flex-end;
+  padding: calc(var(--u) * 0.3) calc(var(--u) * 1.6) 0;
+}
+
+.knob {
+  position: relative;
+  width: calc(var(--u) * 2.6);
+  height: calc(var(--u) * 2.6);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #4a4d52, #232528);
+  border: 1px solid #121416;
+  cursor: pointer;
+  box-shadow: 0 calc(var(--u) * 0.15) calc(var(--u) * 0.3) rgba(0, 0, 0, 0.6);
+}
+
+.knobMark {
+  position: absolute;
+  inset: 0;
+}
+
+.knobMark::after {
+  content: '';
+  position: absolute;
+  top: calc(var(--u) * 0.15);
+  left: 50%;
+  width: calc(var(--u) * 0.2);
+  height: calc(var(--u) * 0.7);
+  margin-left: calc(var(--u) * -0.1);
+  background: #e8eaec;
+  border-radius: 1px;
+}
+
+.knobLabel {
+  position: absolute;
+  bottom: calc(var(--u) * -1.1);
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--cdu-font);
+  font-size: calc(var(--u) * 0.55);
+  color: #9a9da0;
+}

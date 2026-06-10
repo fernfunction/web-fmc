@@ -1,0 +1,35 @@
+{
+  "id": "preflight",
+  "label": "ON GROUND · COLD & DARK (SBGR GATE A12)",
+  "initialPage": "IDENT",
+  "identConfirmed": false,
+  "posInitDone": false,
+  "aircraft": {
+    "phase": "PREFLIGHT",
+    "position": { "lat": -23.433, "lon": -46.47 },
+    "altitude": 2459,
+    "ias": 0,
+    "mach": 0,
+    "tas": 0,
+    "groundSpeed": 0,
+    "heading": 95,
+    "track": 95,
+    "vsFpm": 0,
+    "grossWeight": 142.6,
+    "fuel": { "total": 28.4, "perTank": [11.2, 6.0, 11.2], "fuelFlow": 0 },
+    "sat": 18,
+    "tat": 18,
+    "wind": { "dir": 0, "speed": 0 },
+    "irs": { "status": "ALIGN", "driftNmHr": 0 },
+    "irsPosSet": false,
+    "gpsAvailable": true,
+    "onGround": true,
+    "clock": { "gmtSeconds": 33120, "date": "10JUN26" }
+  },
+  "plan": {
+    "perf": { "transAlt": 9000 },
+    "takeoff": {},
+    "activated": false,
+    "executed": false
+  }
+}

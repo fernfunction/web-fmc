@@ -1,0 +1,56 @@
+{
+  "id": "taxi",
+  "label": "ON GROUND · TAXI TO 09R (SBGR)",
+  "initialPage": "TAKEOFF_REF",
+  "identConfirmed": true,
+  "posInitDone": true,
+  "aircraft": {
+    "phase": "TAXI",
+    "position": { "lat": -23.439, "lon": -46.488 },
+    "altitude": 2459,
+    "ias": 0,
+    "mach": 0,
+    "tas": 12,
+    "groundSpeed": 12,
+    "heading": 95,
+    "track": 95,
+    "vsFpm": 0,
+    "grossWeight": 154.7,
+    "fuel": { "total": 40.5, "perTank": [17.0, 6.5, 17.0], "fuelFlow": 1450 },
+    "sat": 21,
+    "tat": 21,
+    "wind": { "dir": 120, "speed": 7 },
+    "irs": { "status": "NAV", "driftNmHr": 0.4 },
+    "irsPosSet": true,
+    "gpsAvailable": true,
+    "onGround": true,
+    "clock": { "gmtSeconds": 35280, "date": "10JUN26" }
+  },
+  "plan": {
+    "origin": "SBGR",
+    "dest": "SBSV",
+    "coRoute": "GRUSSA01",
+    "fltNo": "WFM101",
+    "runway": "09R",
+    "sid": "VURI1A",
+    "star": "GARI1",
+    "approach": "ILS 10",
+    "route": [
+      { "via": "DIRECT", "to": "VURIB" },
+      { "via": "UZ44", "to": "POKON" },
+      { "via": "UZ31", "to": "GARIS" }
+    ],
+    "perf": {
+      "zfw": 114.2,
+      "reserves": 5.2,
+      "costIndex": 35,
+      "crzAlt": 36000,
+      "transAlt": 9000,
+      "crzWind": { "dir": 250, "speed": 40 },
+      "isaDev": 2
+    },
+    "takeoff": { "flaps": 5, "cg": 22.0, "acceptSpeeds": true },
+    "activated": true,
+    "executed": true
+  }
+}

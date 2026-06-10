@@ -17,7 +17,8 @@ describe('telemetry sampler', () => {
     const alt = getSeries('alt');
     const fuel = getSeries('fuel');
     expect(t.length).toBeGreaterThanOrEqual(2);
-    expect(alt[alt.length - 1]).toBe(36000);
+    // the altitude hold breathes a few feet around the target
+    expect(Math.abs((alt[alt.length - 1] ?? 0) - 36000)).toBeLessThan(40);
     expect(fuel[fuel.length - 1]).toBeLessThan(24.0);
   });
 

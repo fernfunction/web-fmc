@@ -9,12 +9,11 @@ import type {
   PlanData,
   ScenarioId,
 } from './types';
-import { MSG } from './messages';
 import { emptyPlan, showMessage } from './pageApi';
 import { getPage } from './pageRouter';
 import { buildLegs, findLegIndex, type RouteSpecItem } from './nav/route';
-import { bearingDeg, destinationPoint, distanceNm } from './nav/geo';
-import { takeoffSpeeds, cruiseFuelFlow } from './perf/model';
+import { takeoffSpeeds } from './perf/model';
+import { advanceSim } from './sim';
 import preflightJson from '../data/scenarios/preflight.json';
 import taxiJson from '../data/scenarios/taxi.json';
 import cruiseJson from '../data/scenarios/cruise.json';
@@ -97,6 +96,14 @@ function buildScenarioState(id: ScenarioId): FmcState {
 
   return {
     scenario: id,
+    sim: {
+      baseWind: { ...sc.aircraft.wind },
+      windDirOfs: 0,
+      windSpdOfs: 0,
+      satOfs: 0,
+      vsTurb: 0,
+      holding: false,
+    },
     aircraft: structuredClone(sc.aircraft),
     active: plan,
     mod: null,
@@ -302,63 +309,7 @@ export const useFmcStore = create<FmcStore>((set, get) => {
     },
 
     tick(dt) {
-      apply((d) => {
-        d.aircraft.clock.gmtSeconds = (d.aircraft.clock.gmtSeconds + dt) % 86400;
-        if (d.aircraft.phase !== 'CRUISE' || d.aircraft.onGround) return;
-
-        const legs = d.active.legs;
-        let li = d.activeLegIndex;
-        while (li < legs.length && legs[li].isDiscontinuity) li++;
-        if (li >= legs.length) return;
-
-        const gs = d.aircraft.groundSpeed;
-        let stepNm = (gs * dt) / 3600;
-        let pos = d.aircraft.position;
-
-        // walk along the route, sequencing waypoints as they are reached
-        while (stepNm > 0 && li < legs.length) {
-          const tgt = legs[li];
-          if (tgt.isDiscontinuity) {
-            li++;
-            continue;
-          }
-          const dToWpt = distanceNm(pos, tgt);
-          if (stepNm >= dToWpt) {
-            stepNm -= dToWpt;
-            pos = { lat: tgt.lat, lon: tgt.lon };
-            li++;
-          } else {
-            const brg = bearingDeg(pos, tgt);
-            pos = destinationPoint(pos, brg, stepNm);
-            d.aircraft.track = brg;
-            d.aircraft.heading = (brg - 3 + 360) % 360;
-            stepNm = 0;
-          }
-        }
-        d.aircraft.position = pos;
-        while (li < legs.length && legs[li].isDiscontinuity) li++;
-        if (li >= legs.length) {
-          li = legs.length - 1;
-          showMessage(d, MSG.endOfRoute);
-        }
-        d.activeLegIndex = li;
-
-        // fuel burn and weight bookkeeping
-        const ff = cruiseFuelFlow(d.aircraft.grossWeight, d.aircraft.altitude);
-        d.aircraft.fuel.fuelFlow = ff;
-        const burned = (ff * dt) / 3600 / 1000;
-        d.aircraft.fuel.total = Math.max(0, d.aircraft.fuel.total - burned);
-        const split = burned / 3;
-        d.aircraft.fuel.perTank = d.aircraft.fuel.perTank.map((t) => Math.max(0, t - split)) as [
-          number,
-          number,
-          number,
-        ];
-        d.aircraft.grossWeight = Math.max(0, d.aircraft.grossWeight - burned);
-        if (d.active.perf.zfw) {
-          d.active.perf.gw = Number((d.active.perf.zfw + d.aircraft.fuel.total).toFixed(1));
-        }
-      });
+      apply((d) => advanceSim(d, dt));
     },
 
     setBrightness(v) {

@@ -12,7 +12,7 @@ export function TopBar() {
 
   return (
     <div className={styles.topBar}>
-      <span className={styles.brand}>web-fmc · 737 FMC/CDU</span>
+      <span className={styles.brand}><a href="https://github.com/fernfunction/web-fmc" target="_blank" rel="noopener noreferrer">web-fmc</a> · 737 FMC/CDU · <strong>not for training use</strong> ·</span>
       <label className={styles.scenario}>
         SCENARIO
         <select value={scenario} onChange={(e) => loadScenario(e.target.value as ScenarioId)}>

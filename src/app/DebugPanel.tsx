@@ -48,34 +48,42 @@ export function DebugPanel() {
 
       <h3>SIMULATION FEED</h3>
       <div className={styles.chartGrid}>
-        <TimeChart title="ALTITUDE (FT)" fields={[{ key: 'alt', label: 'ALT', color: C.cyan }]} />
+        <TimeChart title="ALTITUDE (FT)" minSpan={1000} fields={[{ key: 'alt', label: 'ALT', color: C.cyan }]} />
         <TimeChart
           title="SPEEDS (KT)"
+          minSpan={60}
           fields={[
             { key: 'ias', label: 'IAS', color: C.green },
             { key: 'tas', label: 'TAS', color: C.cyan },
             { key: 'gs', label: 'GS', color: C.magenta },
           ]}
         />
-        <TimeChart title="MACH" fields={[{ key: 'mach', label: 'M', color: C.amber }]} />
+        <TimeChart title="MACH" minSpan={0.02} fields={[{ key: 'mach', label: 'M', color: C.amber }]} />
         <TimeChart
           title="HDG / TRK (°)"
+          minSpan={40}
           fields={[
             { key: 'hdg', label: 'HDG', color: C.green },
             { key: 'trk', label: 'TRK', color: C.cyan },
           ]}
         />
-        <TimeChart title="VERT SPEED (FPM)" fields={[{ key: 'vs', label: 'V/S', color: C.magenta }]} />
+        <TimeChart
+          title="VERT SPEED (FPM)"
+          minSpan={600}
+          fields={[{ key: 'vs', label: 'V/S', color: C.magenta }]}
+        />
         <TimeChart
           title="WEIGHT / FUEL (×1000 LB)"
+          minSpan={15}
           fields={[
             { key: 'gw', label: 'GW', color: C.amber },
             { key: 'fuel', label: 'FUEL', color: C.green },
           ]}
         />
-        <TimeChart title="FUEL FLOW (LB/HR)" fields={[{ key: 'ff', label: 'FF', color: C.cyan }]} />
+        <TimeChart title="FUEL FLOW (LB/HR)" minSpan={900} fields={[{ key: 'ff', label: 'FF', color: C.cyan }]} />
         <TimeChart
           title="FUEL PER TANK (×1000 LB)"
+          minSpan={4}
           fields={[
             { key: 'tank1', label: 'TK1', color: C.green },
             { key: 'tankC', label: 'CTR', color: C.amber },
@@ -84,6 +92,7 @@ export function DebugPanel() {
         />
         <TimeChart
           title="SAT / TAT (°C)"
+          minSpan={12}
           fields={[
             { key: 'sat', label: 'SAT', color: C.cyan },
             { key: 'tat', label: 'TAT', color: C.amber },
@@ -91,6 +100,7 @@ export function DebugPanel() {
         />
         <TimeChart
           title="WIND (KT / °)"
+          minSpan={60}
           fields={[
             { key: 'windSpd', label: 'SPD', color: C.green },
             { key: 'windDir', label: 'DIR', color: C.cyan },

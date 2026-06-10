@@ -29,7 +29,18 @@ function fmtClock(ts: number): string {
   return `${p(d.getHours())}:${p(d.getMinutes())}:${p(d.getSeconds())}`;
 }
 
-export function TimeChart({ title, fields, height = 110 }: { title: string; fields: ChartField[]; height?: number }) {
+export function TimeChart({
+  title,
+  fields,
+  height = 110,
+  minSpan,
+}: {
+  title: string;
+  fields: ChartField[];
+  height?: number;
+  // smallest y axis span: keeps micro noise from filling the whole chart height
+  minSpan?: number;
+}) {
   const version = useSyncExternalStore(subscribeTelemetry, telemetryVersion);
   const hostRef = useRef<HTMLDivElement>(null);
   const chartRef = useRef<uPlot | null>(null);
@@ -37,13 +48,23 @@ export function TimeChart({ title, fields, height = 110 }: { title: string; fiel
   useEffect(() => {
     const host = hostRef.current;
     if (!host) return;
+    const yRange = (_u: uPlot, min: number, max: number): [number, number] => {
+      if (!Number.isFinite(min) || !Number.isFinite(max)) return [0, 1];
+      const span = max - min;
+      if (minSpan && span < minSpan) {
+        const mid = (min + max) / 2;
+        return [mid - minSpan / 2, mid + minSpan / 2];
+      }
+      const pad = span * 0.1 || 1;
+      return [min - pad, max + pad];
+    };
     const chart = new uPlot(
       {
         width: host.clientWidth || 300,
         height,
         legend: { show: true },
         cursor: { y: false },
-        scales: { x: { time: true } },
+        scales: { x: { time: true }, y: { range: yRange } },
         series: [
           { label: 't' },
           ...fields.map((f) => ({

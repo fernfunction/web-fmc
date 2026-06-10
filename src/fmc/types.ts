@@ -330,8 +330,19 @@ export interface SuppNavData {
   airports: { ident: string; lat: number; lon: number; elev: number }[];
 }
 
+// internal simulation state: noise walks and hold orbiting
+export interface SimInternals {
+  baseWind: { dir: number; speed: number };
+  windDirOfs: number;
+  windSpdOfs: number;
+  satOfs: number;
+  vsTurb: number;
+  holding: boolean;
+}
+
 export interface FmcState {
   scenario: ScenarioId;
+  sim: SimInternals;
   aircraft: AircraftState;
   active: PlanData;
   mod: PlanData | null;

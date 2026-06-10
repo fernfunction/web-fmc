@@ -2,7 +2,11 @@
 
 > [!IMPORTANT]  
 > This project is not affiliated with, or endorsed by, Boeing, Smiths/GE Aviation or any airline. It is an educational toy. Do not use it for flight training, planning or any real-world operation.
-> *Not for production/training use.* See disclaimers on "Adaptations and disclaimers".
+
+> [!CAUTION]
+> **Not for production/training use.** See disclaimers on ["Adaptations and disclaimers"](https://github.com/fernfunction/web-fmc#adaptations-and-disclaimers).
+
+<img width="1920" height="947" alt="image" src="https://github.com/user-attachments/assets/d8c99a98-5c21-4d9a-a6af-bea1cc29c999" />
 
 A semi-functional, browser-only replica of the Boeing 737 FMC Control Display Unit, modeled
 after the Smiths Industries FMCS Guide (FMC U10.2A to 10.4, LCD CDU) and the open documentation
@@ -62,6 +66,8 @@ waypoints sequence, fuel burns and the clock runs. Time can be warped 1x/8x/60x 
 
 ## Procedures
 
+<img width="1920" height="947" alt="image" src="https://github.com/user-attachments/assets/ad39e51c-fb40-402c-a013-75bd8ed597a0" />
+
 Interactive lessons driven from the PROCEDURE select in the top bar. Each procedure is a list
 of steps with a spotlight target, teaching text, a state trigger that detects completion and
 the ops to perform the action automatically. Two modes per procedure:
@@ -100,6 +106,9 @@ contract auto mode relies on.
   (3 digits read as a flight level), prioritized scratchpad messages with the MSG annunciator.
 
 ## Telemetry
+
+<img width="1920" height="947" alt="image" src="https://github.com/user-attachments/assets/69a33fac-326b-49fa-8b9d-6775c1ee8b9c" />
+<img width="1920" height="947" alt="image" src="https://github.com/user-attachments/assets/922c0738-2c17-4785-8898-65d306bac74b" />
 
 The floating speed dial (top right) opens the help panel or the telemetry panel. Telemetry
 shows every simulation feed the FMC consumes as real-time uPlot charts sampled at 1 Hz

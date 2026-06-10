@@ -118,10 +118,12 @@ export function descentDistNm(crzAlt: number, destElev: number): number {
 }
 
 export function machToIas(mach: number, altFt: number): number {
-  // crude compressible conversion that behaves sanely between FL250 and FL410
+  // crude compressible conversion that behaves sanely between FL250 and FL410,
+  // tuned so M.78 at FL360 reads about 252 KIAS like the real airplane
+  // TODO: ^???
   const cs = 661.5 * Math.sqrt(Math.max(0.6, 1 - (altFt / 1000) * 0.0068));
   const tas = mach * cs;
-  const sigma = Math.max(0.25, 1 - (altFt / 1000) * 0.0205);
+  const sigma = Math.max(0.28, 1 - (altFt / 1000) * 0.019);
   return Math.round(tas * Math.sqrt(sigma));
 }
 

@@ -14,6 +14,18 @@ export interface ChartField {
   key: SeriesKey;
   label: string;
   color: string;
+  fmt?: (v: number) => string;
+}
+
+// sensible default precision by magnitude, mach gets 3 decimals, temps 1, big values none
+function fmtValue(v: number | null | undefined, fmt?: (v: number) => string): string {
+  if (v === null || v === undefined) return '--';
+  if (fmt) return fmt(v);
+  const abs = Math.abs(v);
+  if (abs >= 100) return v.toFixed(0);
+  if (abs >= 10) return v.toFixed(1);
+  if (abs >= 1) return v.toFixed(2);
+  return v.toFixed(3);
 }
 
 const AXIS_STYLE: uPlot.Axis = {
@@ -62,7 +74,7 @@ export function TimeChart({
       {
         width: host.clientWidth || 300,
         height,
-        legend: { show: true },
+        legend: { show: false },
         cursor: { y: false },
         scales: { x: { time: true }, y: { range: yRange } },
         series: [
@@ -109,7 +121,16 @@ export function TimeChart({
 
   return (
     <div className={styles.chartCard}>
-      <div className={styles.chartTitle}>{title}</div>
+      <div className={styles.chartHead}>
+        <span className={styles.chartTitle}>{title}</span>
+        <span className={styles.counters}>
+          {fields.map((f) => (
+            <span key={f.key} className={styles.counter} style={{ color: f.color }}>
+              {f.label} {fmtValue(getSeries(f.key).at(-1), f.fmt)}
+            </span>
+          ))}
+        </span>
+      </div>
       <div ref={hostRef} />
     </div>
   );

@@ -70,7 +70,7 @@ export function DebugPanel() {
         <TimeChart
           title="VERT SPEED (FPM)"
           minSpan={600}
-          fields={[{ key: 'vs', label: 'V/S', color: C.magenta }]}
+          fields={[{ key: 'vs', label: 'V/S', color: C.magenta, fmt: (v) => v.toFixed(0) }]}
         />
         <TimeChart
           title="WEIGHT / FUEL (×1000 LB)"
@@ -111,8 +111,8 @@ export function DebugPanel() {
         <TimeChart
           title="POSITION (°)"
           fields={[
-            { key: 'lat', label: 'LAT', color: C.green },
-            { key: 'lon', label: 'LON', color: C.cyan },
+            { key: 'lat', label: 'LAT', color: C.green, fmt: (v) => v.toFixed(3) },
+            { key: 'lon', label: 'LON', color: C.cyan, fmt: (v) => v.toFixed(3) },
           ]}
         />
       </div>

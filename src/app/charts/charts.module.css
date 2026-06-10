@@ -6,10 +6,35 @@
   min-width: 0;
 }
 
+.chartHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.2rem;
+  min-width: 0;
+}
+
 .chartTitle {
   font-family: var(--cdu-font);
   font-size: 0.62rem;
   letter-spacing: 0.08em;
   color: #9fa3a8;
-  margin-bottom: 0.2rem;
+  white-space: nowrap;
+}
+
+.counters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.15rem 0.6rem;
+  min-width: 0;
+}
+
+.counter {
+  font-family: var(--cdu-font);
+  font-size: 0.62rem;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  text-shadow: 0 0 6px currentColor;
 }

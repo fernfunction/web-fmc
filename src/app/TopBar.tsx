@@ -1,5 +1,6 @@
 import { scenarioLabels, useFmcStore } from '../fmc/store';
 import type { ScenarioId } from '../fmc/types';
+import { ProcMenu } from './ProcMenu';
 import styles from './app.module.css';
 
 export function TopBar() {
@@ -22,6 +23,7 @@ export function TopBar() {
           ))}
         </select>
       </label>
+      <ProcMenu />
       {phase === 'CRUISE' && (
         <div className={styles.timeScale}>
           TIME

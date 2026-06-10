@@ -8,8 +8,9 @@
 
 .topBar {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 1.5rem;
+  gap: 0.4rem 1.5rem;
   padding: 0.4rem 1rem;
   background: #15171a;
   border-bottom: 1px solid #26282c;
@@ -37,6 +38,30 @@
   font-family: var(--cdu-font);
   font-size: 0.72rem;
   padding: 0.2rem 0.4rem;
+  max-width: 18rem;
+  text-overflow: ellipsis;
+}
+
+.procProgress {
+  font-family: var(--cdu-font);
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  color: #ffd84d;
+}
+
+.procStop {
+  background: #3a2224;
+  color: #f0b9bd;
+  border: 1px solid #5a3236;
+  border-radius: 3px;
+  font-family: var(--cdu-font);
+  font-size: 0.62rem;
+  padding: 0.22rem 0.5rem;
+  cursor: pointer;
+}
+
+.procStop:hover {
+  background: #4a282c;
 }
 
 .timeScale {

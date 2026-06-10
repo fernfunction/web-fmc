@@ -31,6 +31,95 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
+/* dark theme for the driver.js procedure popovers */
+.driver-popover.wfm-tour {
+  background: #1a1d22;
+  color: #d8dadc;
+  max-width: 340px;
+  border: 1px solid #393d44;
+  border-radius: 8px;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.6);
+}
+
+.driver-popover.wfm-tour .driver-popover-title {
+  font-family: var(--cdu-font);
+  font-size: 0.74rem;
+  letter-spacing: 0.06em;
+  color: #ffd84d;
+}
+
+.driver-popover.wfm-tour .driver-popover-description {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: #c9ccd0;
+}
+
+.driver-popover.wfm-tour .driver-popover-arrow-side-left.driver-popover-arrow {
+  border-left-color: #1a1d22;
+}
+.driver-popover.wfm-tour .driver-popover-arrow-side-right.driver-popover-arrow {
+  border-right-color: #1a1d22;
+}
+.driver-popover.wfm-tour .driver-popover-arrow-side-top.driver-popover-arrow {
+  border-top-color: #1a1d22;
+}
+.driver-popover.wfm-tour .driver-popover-arrow-side-bottom.driver-popover-arrow {
+  border-bottom-color: #1a1d22;
+}
+
+.driver-popover.wfm-tour .driver-popover-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.35rem;
+  margin-top: 0.6rem;
+}
+
+.wfm-task {
+  margin-top: 0.55rem;
+  padding: 0.35rem 0.5rem;
+  background: #16281a;
+  border-left: 3px solid #2fd64f;
+  border-radius: 3px;
+  font-family: var(--cdu-font);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  color: #bfe8c6;
+}
+
+.wfm-auto-note {
+  margin-top: 0.4rem;
+  font-size: 0.66rem;
+  font-style: italic;
+  color: #8a8d92;
+}
+
+.wfm-tour-btn {
+  background: #24272c;
+  color: #d6d8da;
+  border: 1px solid #3a3e44;
+  border-radius: 4px;
+  font-family: var(--cdu-font);
+  font-size: 0.64rem;
+  letter-spacing: 0.05em;
+  padding: 0.28rem 0.55rem;
+  cursor: pointer;
+  text-shadow: none;
+}
+
+.wfm-tour-btn:hover {
+  background: #2e3137;
+}
+
+.wfm-tour-btn-accent {
+  background: #2f4d2f;
+  color: #cdeacd;
+  border-color: #3f6b3f;
+}
+
+.wfm-tour-btn-accent:hover {
+  background: #3a5e3a;
+}
+
 /* dark theme tweaks for uPlot legends inside the telemetry panel */
 .uplot .u-legend {
   font-family: var(--cdu-font);

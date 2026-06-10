@@ -46,7 +46,7 @@ export function Keyboard() {
       <div className={styles.modeRows}>
         <div className={styles.modeRow}>
           {MODE_KEYS_TOP.map((k) => (
-            <button key={k.key} className={styles.fnKey} onClick={() => store.modeKey(k.key)}>
+            <button key={k.key} className={styles.fnKey} data-key={k.key} onClick={() => store.modeKey(k.key)}>
               {k.label.split('\n').map((l, i) => (
                 <span key={i}>{l}</span>
               ))}
@@ -55,7 +55,7 @@ export function Keyboard() {
         </div>
         <div className={styles.modeRow}>
           {MODE_KEYS_MID.map((k) => (
-            <button key={k.key} className={styles.fnKey} onClick={() => store.modeKey(k.key)}>
+            <button key={k.key} className={styles.fnKey} data-key={k.key} onClick={() => store.modeKey(k.key)}>
               {k.label.split('\n').map((l, i) => (
                 <span key={i}>{l}</span>
               ))}
@@ -71,25 +71,25 @@ export function Keyboard() {
           </button>
         </div>
         <div className={styles.modeRow}>
-          <button className={styles.fnKey} onClick={() => store.modeKey('N1_LIMIT')}>
+          <button className={styles.fnKey} data-key="N1_LIMIT" onClick={() => store.modeKey('N1_LIMIT')}>
             <span>N1</span>
             <span>LIMIT</span>
           </button>
-          <button className={styles.fnKey} onClick={() => store.modeKey('FIX')}>
+          <button className={styles.fnKey} data-key="FIX" onClick={() => store.modeKey('FIX')}>
             <span>FIX</span>
           </button>
-          <button className={styles.fnKey} onClick={() => store.prevPage()}>
+          <button className={styles.fnKey} data-key="PREV_PAGE" onClick={() => store.prevPage()}>
             <span>PREV</span>
             <span>PAGE</span>
           </button>
-          <button className={styles.fnKey} onClick={() => store.nextPage()}>
+          <button className={styles.fnKey} data-key="NEXT_PAGE" onClick={() => store.nextPage()}>
             <span>NEXT</span>
             <span>PAGE</span>
           </button>
         </div>
       </div>
 
-      <div className={styles.lowerBlock}>
+      <div className={styles.lowerBlock} data-testid="keypad">
         <div className={styles.numPad}>
           {['123', '456', '789'].map((row) => (
             <div className={styles.numRow} key={row}>

@@ -1,7 +1,7 @@
 {
   "name": "web-fmc",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "author": "fernfunction",
   "description": "Semi-functional browser replica of the Boeing 737 FMC/CDU",

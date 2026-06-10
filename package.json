@@ -19,6 +19,7 @@
     "immer": "^11.1.8",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "uplot": "^1.6.32",
     "zustand": "^5.0.3"
   },
   "devDependencies": {

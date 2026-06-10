@@ -30,3 +30,18 @@ body {
 button {
   -webkit-tap-highlight-color: transparent;
 }
+
+/* dark theme tweaks for uPlot legends inside the telemetry panel */
+.uplot .u-legend {
+  font-family: var(--cdu-font);
+  font-size: 9px;
+  color: #9fa3a8;
+}
+
+.uplot .u-legend th {
+  font-weight: 400;
+}
+
+.uplot .u-legend .u-value {
+  color: #d6d8da;
+}

@@ -104,6 +104,7 @@ function buildScenarioState(id: ScenarioId): FmcState {
       page: sc.initialPage,
       pageIndex: 0,
       helpOpen: false,
+      debugOpen: false,
       brightness: 0.85,
       timeScale: 1,
       fixInfo: [{}, {}],
@@ -135,6 +136,7 @@ export interface FmcStore extends FmcState {
   tick(dtSeconds: number): void;
   setBrightness(v: number): void;
   toggleHelp(): void;
+  toggleDebug(): void;
   setTimeScale(s: 1 | 8 | 60): void;
 }
 
@@ -145,7 +147,14 @@ export const useFmcStore = create<FmcStore>((set, get) => {
     ...buildScenarioState('preflight'),
 
     loadScenario(id) {
-      set((s) => ({ ...s, ...buildScenarioState(id) }));
+      set((s) => {
+        const fresh = buildScenarioState(id);
+        // keep panel and display preferences across scenario swaps
+        fresh.ui.helpOpen = s.ui.helpOpen;
+        fresh.ui.debugOpen = s.ui.debugOpen;
+        fresh.ui.brightness = s.ui.brightness;
+        return { ...s, ...fresh };
+      });
     },
 
     typeChar(c) {
@@ -361,6 +370,14 @@ export const useFmcStore = create<FmcStore>((set, get) => {
     toggleHelp() {
       apply((d) => {
         d.ui.helpOpen = !d.ui.helpOpen;
+        if (d.ui.helpOpen) d.ui.debugOpen = false;
+      });
+    },
+
+    toggleDebug() {
+      apply((d) => {
+        d.ui.debugOpen = !d.ui.debugOpen;
+        if (d.ui.debugOpen) d.ui.helpOpen = false;
       });
     },
 

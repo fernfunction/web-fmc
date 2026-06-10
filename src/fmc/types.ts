@@ -262,6 +262,7 @@ export interface UiState {
   page: PageId;
   pageIndex: number; // 0-based subpage
   helpOpen: boolean;
+  debugOpen: boolean;
   brightness: number; // 0..1
   timeScale: 1 | 8 | 60;
   // SELECT DESIRED WPT support: where to return and what to do with the pick

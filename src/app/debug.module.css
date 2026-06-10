@@ -1,0 +1,91 @@
+.panel {
+  /* sits beside the CDU as a flex sibling so the FMC stays fully visible */
+  flex: 1 1 0;
+  min-width: 16rem;
+  align-self: stretch;
+  margin: 1rem 3.4rem 1rem 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: rgba(16, 18, 21, 0.97);
+  border: 1px solid #34373c;
+  border-radius: 8px;
+  padding: 0.9rem 1.1rem 1.2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  margin-bottom: 0.4rem;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  color: #e8eaec;
+  font-family: var(--cdu-font);
+}
+
+.headerNote {
+  font-size: 0.65rem;
+  color: #7c8085;
+  flex: 1;
+}
+
+.header button {
+  background: none;
+  border: none;
+  color: #9a9da1;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.panel h3 {
+  margin: 0.9rem 0 0.4rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  color: #8e9296;
+  font-family: var(--cdu-font);
+  border-bottom: 1px solid #25282c;
+  padding-bottom: 0.25rem;
+}
+
+.chartGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(19rem, 100%), 1fr));
+  gap: 0.5rem;
+}
+
+.chipGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+  gap: 0.35rem;
+}
+
+.chip {
+  display: flex;
+  flex-direction: column;
+  background: #16181b;
+  border: 1px solid #25282c;
+  border-radius: 5px;
+  padding: 0.3rem 0.5rem;
+  min-width: 0;
+}
+
+.chipLabel {
+  font-family: var(--cdu-font);
+  font-size: 0.55rem;
+  letter-spacing: 0.08em;
+  color: #7c8085;
+}
+
+.chipValue {
+  font-family: var(--cdu-font);
+  font-size: 0.78rem;
+  color: #2fd64f;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

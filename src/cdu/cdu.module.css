@@ -2,6 +2,7 @@
   --u: calc(var(--cdu-h) / 63);
   height: var(--cdu-h);
   aspect-ratio: 0.62;
+  flex-shrink: 0;
   background: linear-gradient(180deg, #5b5e63 0%, #3c3f44 4%, #2e3034 50%, #232528 100%);
   border-radius: calc(var(--u) * 1.4);
   border: 1px solid #101214;
